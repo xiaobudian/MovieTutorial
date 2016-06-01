@@ -7775,8 +7775,17 @@ section.content > .s-DataGrid {
 }
 .s-MovieDialog > .size {
   width: 650px;
-  height: 500px;
+  height: 550px;
 }
 .s-MovieDialog .caption {
+  width: 150px;
+}
+/* ------------------------------------------------------------------------- */
+/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
+/* ------------------------------------------------------------------------- */
+.s-MovieDB-GenreDialog > .size {
+  width: 650px;
+}
+.s-MovieDB-GenreDialog .caption {
   width: 150px;
 }
