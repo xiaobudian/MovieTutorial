@@ -1,8 +1,7 @@
-﻿
-
-namespace MovieTutorial.MovieDB {
+﻿namespace MovieTutorial.MovieDB {
     export class GenreForm extends Serenity.PrefixedContext {
         static formKey = 'MovieDB.Genre';
+
     }
 
     export interface GenreForm {
@@ -11,3 +10,4 @@ namespace MovieTutorial.MovieDB {
 
     [['Name', () => Serenity.StringEditor]].forEach(x => Object.defineProperty(GenreForm.prototype, <string>x[0], { get: function () { return this.w(x[0], (x[1] as any)()); }, enumerable: true, configurable: true }));
 }
+

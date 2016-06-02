@@ -7789,3 +7789,37 @@ section.content > .s-DataGrid {
 .s-MovieDB-GenreDialog .caption {
   width: 150px;
 }
+/* ------------------------------------------------------------------------- */
+/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
+/* ------------------------------------------------------------------------- */
+.s-MovieDB-MovieGenresDialog > .size {
+  width: 650px;
+}
+.s-MovieDB-MovieGenresDialog .caption {
+  width: 150px;
+}
+/* ------------------------------------------------------------------------- */
+/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
+/* ------------------------------------------------------------------------- */
+.s-MovieDB-PersonDialog > .size {
+  width: 650px;
+}
+.s-MovieDB-PersonDialog .caption {
+  width: 150px;
+}
+/* ------------------------------------------------------------------------- */
+/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
+/* ------------------------------------------------------------------------- */
+/*.s-MovieDB-MovieCastDialog {
+    > .size { width: 650px; }
+    .caption { width: 150px; }
+}*/
+.s-MovieDB-MovieCastEditDialog > .size {
+  width: 450px;
+}
+.s-MovieDB-MovieCastEditDialog .caption {
+  width: 120px;
+}
+.s-MovieDB-MovieCastEditDialog .s-PropertyGrid .categories {
+  height: 120px;
+}

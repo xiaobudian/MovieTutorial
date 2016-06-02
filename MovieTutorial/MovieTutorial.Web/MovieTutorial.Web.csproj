@@ -1234,10 +1234,25 @@
     <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\Common.UserPreferenceUpdateRequest.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.Gender.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.GenreColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.MovieCastColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.MovieColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.MovieGenresColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.MovieKind.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.PersonColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Modules\Common\Navigation\ThemeSelection.ts" />
@@ -1250,6 +1265,9 @@
     <TypeScriptCompile Include="Modules\Membership\Account\ResetPassword\ResetPasswordPanel.ts" />
     <TypeScriptCompile Include="Modules\Membership\Account\LoginPanel.ts" />
     <TypeScriptCompile Include="Modules\Membership\Account\SignUp\SignUpPanel.ts" />
+    <TypeScriptCompile Include="Modules\MovieDB\MovieCast\MovieCastEditDialog.ts" />
+    <TypeScriptCompile Include="Modules\MovieDB\MovieCast\MovieCastEditor.ts" />
+    <TypeScriptCompile Include="Modules\MovieDB\Movie\GenreListFormatter.ts" />
     <TypeScriptCompile Include="Modules\Northwind\Category\CategoryDialog.ts" />
     <TypeScriptCompile Include="Modules\Northwind\Category\CategoryGrid.ts" />
     <TypeScriptCompile Include="Modules\Northwind\Customer\CustomerGrid.ts" />
@@ -1663,6 +1681,42 @@
     </TypeScriptCompile>
     <TypeScriptCompile Include="Modules\MovieDB\Genre\GenreGrid.ts" />
     <TypeScriptCompile Include="Modules\MovieDB\Genre\GenreDialog.ts" />
+    <Content Include="Modules\MovieDB\MovieGenres\MovieGenresIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.MovieGenresRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.MovieGenresService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.MovieGenresForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\MovieDB\MovieGenres\MovieGenresGrid.ts" />
+    <TypeScriptCompile Include="Modules\MovieDB\MovieGenres\MovieGenresDialog.ts" />
+    <Content Include="Modules\MovieDB\Person\PersonIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.PersonRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.PersonService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.PersonForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\MovieDB\Person\PersonGrid.ts" />
+    <TypeScriptCompile Include="Modules\MovieDB\Person\PersonDialog.ts" />
+    <Content Include="Modules\MovieDB\MovieCast\MovieCastIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.MovieCastRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.MovieCastService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\Common\Imports\ServerTypings\MovieDB.MovieCastForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\MovieDB\MovieCast\MovieCastGrid.ts" />
+    <TypeScriptCompile Include="Modules\MovieDB\MovieCast\MovieCastDialog.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1724,6 +1778,12 @@
     <Compile Include="Modules\Common\Imports\ClientTypes\BasicSamples.ProduceSeafoodCategoryEditorAttribute.cs">
       <DependentUpon>ClientTypes.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Common\Imports\ClientTypes\MovieDB.GenreListFormatterAttribute.cs">
+      <DependentUpon>ClientTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Imports\ClientTypes\MovieDB.MovieCastEditorAttribute.cs">
+      <DependentUpon>ClientTypes.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Common\Imports\ClientTypes\Northwind.CustomerEditorAttribute.cs">
       <DependentUpon>ClientTypes.tt</DependentUpon>
     </Compile>
@@ -1749,8 +1809,10 @@
       <DependentUpon>ClientTypes.tt</DependentUpon>
     </Compile>
     <Compile Include="Modules\Common\Migrations\DefaultDB\DefaultDB_20160519_135200_SampleMovies.cs" />
+    <Compile Include="Modules\Common\Migrations\DefaultDB\DefaultDB_20160528_141600_PersonAndMovieCast.cs" />
     <Compile Include="Modules\Common\Migrations\DefaultDB\DefaultDB_20160519_154700_GenreTable.cs" />
     <Compile Include="Modules\Common\Migrations\DefaultDB\DefaultDB_20150924_154100_SampleGenres.cs" />
+    <Compile Include="Modules\Common\Migrations\DefaultDB\DefaultDB_20160528_115400_MovieGenres.cs" />
     <Compile Include="Modules\Common\Migrations\DefaultDB\DefaultDB_20160601_135901_MovieKind.cs" />
     <Compile Include="Modules\Common\Migrations\DefaultDB\DefaultDB_20160530_161801_MovieTable.cs" />
     <Compile Include="Modules\Common\Migrations\DefaultDB\DefaultDB_20160515_072600_UserPreferences.cs" />
@@ -1802,6 +1864,7 @@
     <Compile Include="Modules\Membership\Account\SignUp\SignUpRequest.cs" />
     <Compile Include="Modules\Common\UserPreference\UserPreferenceRow.cs" />
     <Compile Include="Modules\MovieDB\Movie\MovieKind.cs" />
+    <Compile Include="Modules\MovieDB\Person\Gender.cs" />
     <Compile Include="Modules\Northwind\CategoryLang\CategoryLangEndpoint.cs" />
     <Compile Include="Modules\Northwind\CategoryLang\CategoryLangRepository.cs" />
     <Compile Include="Modules\Northwind\CategoryLang\CategoryLangRow.cs" />
@@ -1937,6 +2000,24 @@
     <Compile Include="Modules\MovieDB\Genre\GenreRepository.cs" />
     <Compile Include="Modules\MovieDB\Genre\GenreEndpoint.cs" />
     <Compile Include="Modules\MovieDB\Genre\GenrePage.cs" />
+    <Compile Include="Modules\MovieDB\MovieGenres\MovieGenresRow.cs" />
+    <Compile Include="Modules\MovieDB\MovieGenres\MovieGenresColumns.cs" />
+    <Compile Include="Modules\MovieDB\MovieGenres\MovieGenresForm.cs" />
+    <Compile Include="Modules\MovieDB\MovieGenres\MovieGenresRepository.cs" />
+    <Compile Include="Modules\MovieDB\MovieGenres\MovieGenresEndpoint.cs" />
+    <Compile Include="Modules\MovieDB\MovieGenres\MovieGenresPage.cs" />
+    <Compile Include="Modules\MovieDB\Person\PersonRow.cs" />
+    <Compile Include="Modules\MovieDB\Person\PersonColumns.cs" />
+    <Compile Include="Modules\MovieDB\Person\PersonForm.cs" />
+    <Compile Include="Modules\MovieDB\Person\PersonRepository.cs" />
+    <Compile Include="Modules\MovieDB\Person\PersonEndpoint.cs" />
+    <Compile Include="Modules\MovieDB\Person\PersonPage.cs" />
+    <Compile Include="Modules\MovieDB\MovieCast\MovieCastRow.cs" />
+    <Compile Include="Modules\MovieDB\MovieCast\MovieCastColumns.cs" />
+    <Compile Include="Modules\MovieDB\MovieCast\MovieCastForm.cs" />
+    <Compile Include="Modules\MovieDB\MovieCast\MovieCastRepository.cs" />
+    <Compile Include="Modules\MovieDB\MovieCast\MovieCastEndpoint.cs" />
+    <Compile Include="Modules\MovieDB\MovieCast\MovieCastPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
