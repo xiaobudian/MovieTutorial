@@ -7823,3 +7823,52 @@ section.content > .s-DataGrid {
 .s-MovieDB-MovieCastEditDialog .s-PropertyGrid .categories {
   height: 120px;
 }
+.s-PersonDialog > .size {
+  min-width: 700px;
+  width: 700px;
+  min-height: 600px;
+  height: 600px;
+}
+.s-PersonDialog .tab-pane {
+  height: auto;
+}
+.s-PersonDialog .caption {
+  width: 150px;
+}
+.s-PersonDialog .editor {
+  width: 450px;
+}
+.s-PersonDialog input.editor[type=checkbox] {
+  width: auto;
+}
+.s-PersonDialog .s-Form .editor.dateQ {
+  width: 426px;
+}
+.s-PersonDialog .s-Form .editor.emailuser {
+  width: 170px;
+}
+.s-PersonDialog .s-Form .editor.dateQ.s-DateTimeEditor {
+  width: 331px;
+}
+.s-PersonDialog .s-Form .editor.s-DateTimeEditor.time {
+  width: 64px;
+  margin-left: 4px;
+}
+.s-PersonDialog .s-Form .editor.has-inplace-button {
+  width: 424px;
+}
+.s-PersonDialog .s-Form .emaildomain {
+  width: 265px;
+}
+.s-PersonDialog .s-PropertyGrid .categories {
+  height: 460px;
+}
+.s-PersonDialog .ui-dialog-content {
+  overflow: hidden;
+}
+.s-PersonDialog .tab-pane.s-TabMovies {
+  padding: 5px;
+}
+.s-PersonDialog .s-PersonMovieGrid > .grid-container {
+  height: 515px;
+}

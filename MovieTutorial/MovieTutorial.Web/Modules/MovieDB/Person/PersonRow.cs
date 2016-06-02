@@ -73,6 +73,21 @@ namespace MovieTutorial.MovieDB.Entities
             set { Fields.Height[this] = value; }
         }
 
+        [DisplayName("Primary Image"), Size(100),
+            ImageUploadEditor(FilenameFormat = "Person/PrimaryImage/~")]
+        public string PrimaryImage
+        {
+            get { return Fields.PrimaryImage[this]; }
+            set { Fields.PrimaryImage[this] = value; }
+        }
+        [DisplayName("Gallery Images"),
+            MultipleImageUploadEditor(FilenameFormat = "Person/GalleryImages/~")]
+        public string GalleryImages
+        {
+            get { return Fields.GalleryImages[this]; }
+            set { Fields.GalleryImages[this] = value; }
+        }
+
         IIdField IIdRow.IdField
         {
             get { return Fields.PersonId; }
@@ -100,7 +115,8 @@ namespace MovieTutorial.MovieDB.Entities
             public StringField BirthPlace;
             public Int32Field Gender;
             public Int32Field Height;
-
+            public readonly StringField PrimaryImage;
+            public readonly StringField GalleryImages;
             public RowFields()
                 : base("[mov].[Person]")
             {

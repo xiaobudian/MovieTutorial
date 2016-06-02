@@ -407,6 +407,9 @@ declare namespace MovieTutorial.MovieDB {
         protected getNameProperty(): string;
         protected getService(): string;
         protected form: PersonForm;
+        private moviesGrid;
+        constructor();
+        protected afterLoadEntity(): void;
     }
 }
 declare namespace MovieTutorial.MovieDB {
@@ -417,6 +420,21 @@ declare namespace MovieTutorial.MovieDB {
         protected getLocalTextPrefix(): string;
         protected getService(): string;
         constructor(container: JQuery);
+    }
+}
+declare namespace MovieTutorial.MovieDB {
+    class PersonMovieGrid extends Serenity.EntityGrid<MovieCastRow, any> {
+        protected getColumnsKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected getButtons(): any;
+        protected getInitialTitle(): any;
+        protected usePager(): boolean;
+        protected getGridCanLoad(): boolean;
+        private _personID;
+        personID: number;
     }
 }
 declare namespace MovieTutorial.MovieDB {
@@ -1285,6 +1303,8 @@ declare namespace MovieTutorial.MovieDB {
         Title: Serenity.StringEditor;
         Description: Serenity.TextAreaEditor;
         CastList: MovieCastEditor;
+        PrimaryImage: Serenity.ImageUploadEditor;
+        GalleryImages: Serenity.MultipleImageUploadEditor;
         Storyline: Serenity.TextAreaEditor;
         Year: Serenity.IntegerEditor;
         ReleaseDate: Serenity.DateEditor;
@@ -1371,6 +1391,9 @@ declare namespace MovieTutorial.MovieDB {
         Runtime?: number;
         Kind?: MovieKind;
         GenreList?: number[];
+        PrimaryImage?: string;
+        GalleryImages?: string;
+        CastList?: MovieCastRow[];
     }
     namespace MovieRow {
         const idProperty: string;
@@ -1386,6 +1409,9 @@ declare namespace MovieTutorial.MovieDB {
             const Runtime: string;
             const Kind: string;
             const GenreList: string;
+            const PrimaryImage: string;
+            const GalleryImages: string;
+            const CastList: string;
         }
     }
 }
@@ -1415,11 +1441,15 @@ declare namespace MovieTutorial.MovieDB {
     interface PersonForm {
         Firstname: Serenity.StringEditor;
         Lastname: Serenity.StringEditor;
+        PrimaryImage: Serenity.ImageUploadEditor;
+        GalleryImages: Serenity.MultipleImageUploadEditor;
         BirthDate: Serenity.DateEditor;
         BirthPlace: Serenity.StringEditor;
         Gender: Serenity.EnumEditor;
         Height: Serenity.IntegerEditor;
     }
+}
+declare namespace MovieTutorial.MovieDB {
 }
 declare namespace MovieTutorial.MovieDB {
     interface PersonRow {
@@ -1431,6 +1461,8 @@ declare namespace MovieTutorial.MovieDB {
         BirthPlace?: string;
         Gender?: Gender;
         Height?: number;
+        PrimaryImage?: string;
+        GalleryImages?: string;
     }
     namespace PersonRow {
         const idProperty: string;
@@ -1447,6 +1479,8 @@ declare namespace MovieTutorial.MovieDB {
             const BirthPlace: string;
             const Gender: string;
             const Height: string;
+            const PrimaryImage: string;
+            const GalleryImages: string;
         }
     }
 }
